@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PercentageToCgpa from '../components/calculators/PercentageToCgpa.tsx';
+---
+
+<BaseLayout
+  title="Percentage to CGPA Calculator — Reverse Conversion"
+  description="Convert your percentage to CGPA using standard formulas. Supports custom university multipliers. Free, instant, accurate."
+  canonical="/percentage-to-cgpa"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studentutilityhub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Percentage to CGPA", "item": "https://studentutilityhub.com/percentage-to-cgpa" }
+    ]
+  })} />
+
+  <main class="mx-auto max-w-[700px] px-4 py-10 sm:py-16 md:px-6">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Percentage to CGPA</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-2">Percentage to CGPA Calculator.</h1>
+    <p class="body-lg text-body mb-8">Reverse-calculate your CGPA from any percentage value.</p>
+
+    <PercentageToCgpa client:load />
+  </main>
+</BaseLayout>

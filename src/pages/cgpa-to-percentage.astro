@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CgpaToPercentage from '../components/calculators/CgpaToPercentage.tsx';
+---
+
+<BaseLayout
+  title="CGPA to Percentage Converter — Accurate Formula"
+  description="Convert your CGPA to percentage using your university's multiplier. Supports custom formulas. Free and instant."
+  canonical="/cgpa-to-percentage"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studentutilityhub.com" },
+      { "@type": "ListItem", "position": 2, "name": "CGPA to Percentage", "item": "https://studentutilityhub.com/cgpa-to-percentage" }
+    ]
+  })} />
+
+  <main class="mx-auto max-w-[700px] px-4 py-10 sm:py-16 md:px-6">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">CGPA to Percentage</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-2">CGPA to Percentage Converter.</h1>
+    <p class="body-lg text-body mb-8">Convert your CGPA to percentage using your university's conversion formula.</p>
+
+    <CgpaToPercentage client:load />
+
+    <section class="mt-12">
+      <h2 class="display-sm text-ink mb-4">Frequently asked questions.</h2>
+      <div class="flex flex-col gap-4">
+        <div class="rounded-[8px] bg-canvas p-5 shadow-level-1">
+          <h3 class="body-sm-strong text-ink mb-1">What multiplier should I use?</h3>
+          <p class="body-sm text-body">Most Indian universities (VTU, Anna, Mumbai) use 9.5. Some use 10. Check with your university or visit Settings to customize.</p>
+        </div>
+        <div class="rounded-[8px] bg-canvas p-5 shadow-level-1">
+          <h3 class="body-sm-strong text-ink mb-1">What is the formula?</h3>
+          <p class="body-sm text-body">Percentage = CGPA × Multiplier. For example: 8.5 × 9.5 = 80.75%</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

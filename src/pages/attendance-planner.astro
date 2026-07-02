@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AttendancePlanner from '../components/calculators/AttendancePlanner.tsx';
+---
+
+<BaseLayout
+  title="Attendance Planner — Track & Plan 75% Attendance"
+  description="Calculate how many classes you need to attend to reach 75%, or how many you can safely skip. Free attendance calculator."
+  canonical="/attendance-planner"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studentutilityhub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Attendance Planner", "item": "https://studentutilityhub.com/attendance-planner" }
+    ]
+  })} />
+
+  <main class="mx-auto max-w-[700px] px-4 py-10 sm:py-16 md:px-6">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Attendance Planner</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-2">Attendance Planner.</h1>
+    <p class="body-lg text-body mb-8">Track your attendance and find out how many classes you can skip — or need to attend.</p>
+
+    <AttendancePlanner client:load />
+  </main>
+</BaseLayout>

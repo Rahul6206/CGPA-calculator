@@ -1,11 +1,114 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONVERTER_CARDS, ADVANCED_CARDS } from '../lib/constants';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+  title="Student Utility Hub — CGPA, SGPA & Percentage Calculators"
+  description="Free online calculators for SGPA to CGPA, CGPA to percentage, attendance planning, and academic goal tracking. Fast, accurate, no sign-up."
+  canonical=""
+>
+  <!-- Structured Data -->
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Student Utility Hub",
+    "url": "https://studentutilityhub.com",
+    "description": "Free academic calculators for SGPA, CGPA, percentage conversions and attendance planning.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  })} />
+
+  <!-- HERO BAND -->
+  <section class="relative overflow-hidden bg-canvas">
+    <!-- Mesh gradient backdrop -->
+    <div class="absolute inset-0 opacity-[0.15]" aria-hidden="true">
+      <div class="absolute inset-0 animate-gradient bg-gradient-to-br from-gradient-develop-start via-gradient-preview-start via-gradient-preview-end to-gradient-ship-end"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-[1200px] px-4 py-20 sm:py-28 md:py-36 md:px-6">
+      <div class="flex flex-col items-center text-center">
+        <!-- Eyebrow -->
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-canvas-soft px-3 py-1">
+          <span class="caption-mono text-mute">FREE & OPEN SOURCE</span>
+        </div>
+
+        <h1 class="display-xl text-ink max-w-[600px]" style="font-size: clamp(32px, 6vw, 48px); line-height: clamp(36px, 6vw, 48px);">
+          Your academic toolkit, in one place.
+        </h1>
+        <p class="body-lg text-body mt-4 max-w-[480px]">
+          Convert SGPA, CGPA, and percentage instantly. Plan your target CGPA and track attendance — all offline, all free.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="/sgpa-calculator" class="inline-flex h-12 items-center justify-center rounded-[100px] bg-ink px-6 body-sm-strong text-on-primary no-underline transition-opacity hover:opacity-90">
+            Start Calculating
+          </a>
+          <a href="#converters" class="inline-flex h-12 items-center justify-center rounded-[100px] bg-canvas px-6 body-sm-strong text-ink no-underline shadow-level-1 transition-all hover:shadow-level-2">
+            Explore Tools
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONVERTERS SECTION -->
+  <section id="converters" class="bg-canvas-soft">
+    <div class="mx-auto max-w-[1200px] px-4 py-16 sm:py-24 md:px-6">
+      <p class="caption-mono text-mute uppercase mb-2">Module 1</p>
+      <h2 class="display-lg text-ink mb-3">Core converters.</h2>
+      <p class="body-lg text-body mb-10 max-w-[480px]">Quick, accurate conversions between SGPA, CGPA, and percentage.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {CONVERTER_CARDS.map((card) => (
+          <a href={card.href} class="group flex flex-col gap-3 rounded-[8px] bg-canvas p-6 shadow-level-2 no-underline transition-all duration-200 hover:shadow-level-3 hover:-translate-y-0.5" id={`card-${card.href.slice(1)}`}>
+            <span class="text-2xl">{card.icon}</span>
+            <h3 class="display-sm text-ink">{card.title}</h3>
+            <p class="body-sm text-body">{card.description}</p>
+            <span class="mt-auto inline-flex items-center gap-1 body-sm text-link group-hover:text-link-deep transition-colors">
+              Calculate
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" class="transition-transform group-hover:translate-x-0.5"><path d="M5 3l4 4-4 4" /></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED SECTION (dark polarity-flip) -->
+  <section id="advanced" class="bg-ink">
+    <div class="mx-auto max-w-[1200px] px-4 py-16 sm:py-24 md:px-6">
+      <p class="caption-mono text-hairline-strong uppercase mb-2">Module 2</p>
+      <h2 class="display-lg text-on-primary mb-3">Advanced calculators.</h2>
+      <p class="body-lg text-hairline-strong mb-10 max-w-[480px]">Deep-dive tools for academic planning and subject-level analysis.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {ADVANCED_CARDS.map((card) => (
+          <a href={card.href} class="group flex flex-col gap-3 rounded-[8px] bg-on-primary/5 border border-on-primary/10 p-6 no-underline transition-all duration-200 hover:bg-on-primary/10 hover:-translate-y-0.5" id={`card-${card.href.slice(1)}`}>
+            <span class="text-2xl">{card.icon}</span>
+            <h3 class="display-sm text-on-primary">{card.title}</h3>
+            <p class="body-sm text-hairline-strong">{card.description}</p>
+            <span class="mt-auto inline-flex items-center gap-1 body-sm text-cyan group-hover:text-cyan-soft transition-colors">
+              Open
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" class="transition-transform group-hover:translate-x-0.5"><path d="M5 3l4 4-4 4" /></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS CALLOUT -->
+  <section class="bg-canvas-soft">
+    <div class="mx-auto max-w-[1200px] px-4 py-16 sm:py-24 md:px-6 text-center">
+      <p class="caption-mono text-mute uppercase mb-2">Customizable</p>
+      <h2 class="display-lg text-ink mb-3">Your university, your formula.</h2>
+      <p class="body-lg text-body mb-8 max-w-[480px] mx-auto">
+        Set your university's conversion multiplier once — it applies everywhere, saved locally.
+      </p>
+      <a href="/settings" class="inline-flex h-12 items-center justify-center rounded-[100px] bg-ink px-6 body-sm-strong text-on-primary no-underline transition-opacity hover:opacity-90">
+        Configure Settings
+      </a>
+    </div>
+  </section>
+</BaseLayout>

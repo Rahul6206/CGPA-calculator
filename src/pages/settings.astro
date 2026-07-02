@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SettingsPanel from '../components/layout/SettingsPanel.tsx';
+---
+
+<BaseLayout
+  title="Settings — Customize Conversion Multiplier | Student Utility Hub"
+  description="Set your university's CGPA to percentage conversion multiplier. Saved locally for all calculators."
+  canonical="/settings"
+>
+  <main class="mx-auto max-w-[700px] px-4 py-10 sm:py-16 md:px-6">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Settings</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-2">Settings.</h1>
+    <p class="body-lg text-body mb-8">Configure your university's conversion formula. Changes are saved locally and apply to all calculators.</p>
+
+    <SettingsPanel client:load />
+  </main>
+</BaseLayout>

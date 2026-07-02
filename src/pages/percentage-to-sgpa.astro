@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PercentageToSgpa from '../components/calculators/PercentageToSgpa.tsx';
+---
+
+<BaseLayout
+  title="Percentage to SGPA Calculator — Semester Conversion"
+  description="Convert your percentage to semester SGPA. Supports custom multipliers for different universities."
+  canonical="/percentage-to-sgpa"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studentutilityhub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Percentage to SGPA", "item": "https://studentutilityhub.com/percentage-to-sgpa" }
+    ]
+  })} />
+
+  <main class="mx-auto max-w-[700px] px-4 py-10 sm:py-16 md:px-6">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Percentage to SGPA</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-2">Percentage to SGPA Calculator.</h1>
+    <p class="body-lg text-body mb-8">Convert your percentage to semester-specific SGPA instantly.</p>
+
+    <PercentageToSgpa client:load />
+  </main>
+</BaseLayout>

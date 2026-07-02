@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TargetCgpaPlanner from '../components/calculators/TargetCgpaPlanner.tsx';
+---
+
+<BaseLayout
+  title="Target CGPA Planner — Plan Your Academic Goals"
+  description="Find out the SGPA you need in remaining semesters to achieve your target CGPA. Free academic planning tool."
+  canonical="/target-cgpa"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studentutilityhub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Target CGPA", "item": "https://studentutilityhub.com/target-cgpa" }
+    ]
+  })} />
+
+  <main class="mx-auto max-w-[700px] px-4 py-10 sm:py-16 md:px-6">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Target CGPA</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-2">Target CGPA Planner.</h1>
+    <p class="body-lg text-body mb-8">Enter your current CGPA and target to find out what SGPA you need in remaining semesters.</p>
+
+    <TargetCgpaPlanner client:load />
+  </main>
+</BaseLayout>
