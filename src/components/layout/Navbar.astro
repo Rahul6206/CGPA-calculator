@@ -1,0 +1,53 @@
+---
+import MobileMenu from './MobileMenu.tsx';
+
+const links = [
+  { label: 'Converters', href: '/#converters' },
+  { label: 'Advanced', href: '/#advanced' },
+  { label: 'Settings', href: '/settings' },
+];
+---
+
+<header
+  id="main-navbar"
+  class="sticky top-0 z-50 h-16 border-b border-hairline bg-canvas/80 backdrop-blur-md"
+>
+  <nav class="mx-auto flex h-full max-w-[1200px] items-center justify-between px-4 md:px-6">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 text-ink no-underline" id="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="28" height="28" rx="6" fill="#171717"/>
+        <text x="14" y="19" text-anchor="middle" fill="white" font-size="14" font-weight="600" font-family="Inter, sans-serif">S</text>
+      </svg>
+      <span class="body-sm-strong text-ink hidden sm:inline">Student Utility Hub</span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex items-center gap-1">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="body-sm text-body rounded-full px-3 py-1.5 transition-colors duration-150 hover:bg-canvas-soft-2 hover:text-ink"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Desktop CTA -->
+    <div class="hidden md:flex items-center gap-2">
+      <a
+        href="/sgpa-calculator"
+        id="nav-cta"
+        class="body-sm-strong inline-flex h-7 items-center rounded-sm bg-ink px-2 text-on-primary transition-opacity duration-150 hover:opacity-90"
+      >
+        Calculate Now
+      </a>
+    </div>
+
+    <!-- Mobile Menu (React Island) -->
+    <div class="md:hidden">
+      <MobileMenu client:load />
+    </div>
+  </nav>
+</header>
