@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="404 - Page Not Found | Student Utility Hub"
+  description="The page you are looking for does not exist."
+>
+  <main class="mx-auto max-w-[700px] px-4 py-20 sm:py-32 md:px-6 text-center flex flex-col items-center justify-center min-h-[60vh] animate-fade-in-up">
+    <div class="mb-4 inline-flex items-center justify-center rounded-full bg-canvas-soft-2 p-4">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mute">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    
+    <h1 class="display-xl text-ink mb-2">404</h1>
+    <h2 class="display-sm text-ink mb-3">Page not found</h2>
+    <p class="body-lg text-body mb-8">
+      The page you're looking for doesn't exist or has been moved.
+    </p>
+    
+    <a href="/" class="inline-flex h-12 items-center justify-center rounded-[100px] bg-ink px-6 body-sm-strong text-on-primary no-underline transition-opacity hover:opacity-90">
+      Return to Homepage
+    </a>
+  </main>
+</BaseLayout>

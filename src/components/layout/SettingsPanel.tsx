@@ -6,8 +6,6 @@ import { useLocalStorage } from "../../lib/useLocalStorage";
 import { LS_KEYS, DEFAULT_MULTIPLIER } from "../../lib/constants";
 
 const PRESETS = [
-  { label: "VTU / Anna University (×9.5)", value: 9.5 },
-  { label: "Mumbai University (×9.5)", value: 9.5 },
   { label: "CBCS Standard (×10)", value: 10 },
   { label: "Custom", value: -1 },
 ];

@@ -53,12 +53,14 @@ export default function MobileMenu() {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 top-16 z-40 bg-canvas/95 backdrop-blur-sm animate-fade-in"
+          className="absolute left-0 top-full w-full h-[calc(100vh-4rem)] z-50 bg-canvas animate-fade-in"
           onClick={() => setIsOpen(false)}
         >
           <nav
-            className="mx-auto max-w-[1200px] px-4 py-6"
+            className="mx-auto max-w-[1200px] px-4 py-6 "
             onClick={(e) => e.stopPropagation()}
+            
+
           >
             <div className="flex flex-col gap-1">
               {links.map((link) => (

@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  error?: unknown;
+}
+
+const { error } = Astro.props;
+---
+
+<BaseLayout
+  title="500 - Server Error | Student Utility Hub"
+  description="An internal server error occurred."
+>
+  <main class="mx-auto max-w-[700px] px-4 py-20 sm:py-32 md:px-6 text-center flex flex-col items-center justify-center min-h-[60vh] animate-fade-in-up">
+    <div class="mb-4 inline-flex items-center justify-center rounded-full bg-error-soft p-4">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-error">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+    </div>
+    
+    <h1 class="display-xl text-ink mb-2">500</h1>
+    <h2 class="display-sm text-ink mb-3">Internal Server Error</h2>
+    <p class="body-lg text-body mb-8">
+      Something went wrong on our end. Please try again later.
+    </p>
+    
+    <a href="/" class="inline-flex h-12 items-center justify-center rounded-[100px] bg-ink px-6 body-sm-strong text-on-primary no-underline transition-opacity hover:opacity-90">
+      Return to Homepage
+    </a>
+  </main>
+</BaseLayout>
