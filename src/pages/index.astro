@@ -4,20 +4,54 @@ import { CONVERTER_CARDS, ADVANCED_CARDS } from '../lib/constants';
 ---
 
 <BaseLayout
-  title="Student Utility Hub — CGPA, SGPA & Percentage Calculators"
-  description="Free online calculators for SGPA to CGPA, CGPA to percentage, attendance planning, and academic goal tracking. Fast, accurate, no sign-up."
+  title="CGPA to Percentage & SGPA to CGPA Calculator | Fast & Free"
+  description="Free online tools to convert CGPA to percentage, SGPA to CGPA, and track your attendance. Perfect for VTU, SPPU, CBSE, and more. Calculate instantly."
   canonical=""
+  ogImage="/og-image.png"
 >
   <!-- Structured Data -->
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Student Utility Hub",
-    "url": "https://studentutilityhub.com",
-    "description": "Free academic calculators for SGPA, CGPA, percentage conversions and attendance planning.",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Student Utility Hub",
+        "url": "https://studentutilityhub.com",
+        "description": "Free academic calculators for SGPA, CGPA, percentage conversions and attendance planning.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How to convert CGPA to percentage in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To convert your CGPA to percentage, you typically multiply it by a conversion factor specified by your university. Common multipliers are 9.5 (used by CBSE and many state boards) or 10 (used by CBCS and universities like SPPU). For example, a 8.5 CGPA × 9.5 = 80.75%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is total SGPA converted to CGPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Total SGPA to CGPA calculation involves finding the average of your SGPAs across all completed semesters. You simply add up the SGPA for each semester and divide by the total number of semesters. If credit weights apply, calculate each semester's SGPA properly, then combine them using the total credit averages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why use a 75 attendance calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most colleges and schools require a minimum of 75% attendance to appear for final exams. An attendance calculator app helps you track exactly how many classes you can safely skip (bunk) or how many you must attend to maintain this mandatory threshold."
+            }
+          }
+        ]
+      }
+    ]
   })} />
 
   <!-- HERO BAND -->
@@ -111,4 +145,61 @@ import { CONVERTER_CARDS, ADVANCED_CARDS } from '../lib/constants';
       </a>
     </div>
   </section>
+
+  <!-- SEO CONTENT SECTION -->
+  <article class="bg-canvas border-t border-hairline">
+    <div class="mx-auto max-w-[900px] px-4 py-16 sm:py-24 md:px-6">
+      <h2 class="display-md text-ink mb-8">The All-in-One CGPA to Percentage and SGPA to CGPA Calculator</h2>
+      
+      <div class="flex flex-col gap-6 body-md text-body">
+        <p>
+          Welcome to the <strong>Student Utility Hub</strong>, the most accurate online destination for all your academic conversion needs. Whether you are searching for a reliable <strong class="text-ink font-medium">cgpa to percentage calculator</strong> or an <strong class="text-ink font-medium">all semester sgpa to cgpa calculator</strong>, our free online tools are designed to provide instant results without any sign-up requirements. From navigating complex credit systems to ensuring you meet your graduation targets, we've built these utilities with students in mind.
+        </p>
+
+        <div>
+          <h3 class="body-lg font-semibold text-ink mb-3">How to Convert CGPA to Percentage</h3>
+          <p class="mb-3">
+            Understanding the <strong class="text-ink font-medium">cgpa to percentage conversion formula</strong> can be tricky because it varies drastically depending on your educational board or university. However, using our <strong class="text-ink font-medium">cgpa to percentage convert</strong> tool, it's never been easier.
+          </p>
+          <p class="mb-3">
+            In India, the <strong class="text-ink font-medium">cgpa to percentage conversion formula india</strong> heavily relies on a static multiplier:
+          </p>
+          <ul class="list-disc pl-6 mb-3 flex flex-col gap-2">
+            <li><strong>Multiplier 9.5:</strong> Widely used for <strong class="text-ink font-medium">cbse cgpa to percentage</strong> conversions and by many state universities. If your CGPA is 8.0, your percentage is <code class="code text-ink bg-canvas-soft-2 px-1.5 py-0.5 rounded">8.0 × 9.5 = 76%</code>.</li>
+            <li><strong>Multiplier 10:</strong> Commonly used in the standard Choice Based Credit System (CBCS). For example, the <strong class="text-ink font-medium">sppu cgpa to percentage</strong> calculation uses a multiplier of 10 for newer grading systems.</li>
+          </ul>
+          <p>
+            No matter your institution's rule, you can customize the multiplier in our settings panel, and our <strong class="text-ink font-medium">percentage calculator</strong> will adapt instantly.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="body-lg font-semibold text-ink mb-3">Converting SGPA to CGPA Across All Semesters</h3>
+          <p class="mb-3">
+            At the end of every semester, you receive a Semester Grade Point Average (SGPA). But how do you combine these into a final Cumulative Grade Point Average (CGPA)? Our <strong class="text-ink font-medium">total sgpa to cgpa calculator</strong> automates this process for you.
+          </p>
+          <p>
+            If your university uses a simple average, you just add up your semester SGPAs and divide by the total number of semesters. If your university weights the grades by credits, you should use our dedicated <strong class="text-ink font-medium">subject wise sgpa calculator</strong> to find your semester SGPA first, and then our <strong class="text-ink font-medium">convert sgpa to cgpa calculator vtu</strong> tool handles the rest. This ensures complete accuracy when tracking your academic progress over time.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="body-lg font-semibold text-ink mb-3">Advanced Academic Planning: Target CGPA & Subject Tools</h3>
+          <p>
+            Don't just calculate your past performance—plan for your future. Our advanced <strong class="text-ink font-medium">cgpa target calculator</strong> allows you to input your current standing and your dream graduation CGPA. It will instantly tell you exactly what SGPA you need to maintain in your remaining semesters. For detailed semester planning, our <strong class="text-ink font-medium">subject wise cgpa calculator</strong> lets you input specific course credits and anticipated grades to see exactly how individual classes impact your overall score.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="body-lg font-semibold text-ink mb-3">Why You Need a 75 Attendance Calculator</h3>
+          <p class="mb-3">
+            Academics isn't just about grades; it's about being present. Maintaining a minimum of 75% attendance is a strict mandate in almost every Indian educational institution. Our <strong class="text-ink font-medium">75 attendance calculator</strong> acts as your personal <strong class="text-ink font-medium">college attendance calculator</strong> and <strong class="text-ink font-medium">school attendance calculator</strong>.
+          </p>
+          <p>
+            By entering your total classes and attended classes into our <strong class="text-ink font-medium">attendance calculator app</strong>, you instantly see how many classes you can safely skip without falling below the red line, or how many back-to-back classes you must attend to recover your shortage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
 </BaseLayout>

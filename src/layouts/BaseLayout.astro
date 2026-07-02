@@ -7,12 +7,14 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
 }
 
 const {
   title,
   description = 'Free online calculators for SGPA, CGPA, percentage conversions, attendance planning, and academic goal tracking.',
   canonical = '',
+  ogImage = '/og-image.png',
 } = Astro.props;
 
 const siteUrl = 'https://studentutilityhub.com';
@@ -42,11 +44,13 @@ const fullCanonical = `${siteUrl}${canonical}`;
     <meta property="og:type" content="website" />
     <meta property="og:url" content={fullCanonical} />
     <meta property="og:site_name" content="Student Utility Hub" />
+    <meta property="og:image" content={new URL(ogImage, Astro.url)} />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.url)} />
 
     <!-- Fonts (Google Fonts CDN — Inter + JetBrains Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
