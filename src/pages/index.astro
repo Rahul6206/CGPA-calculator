@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { CONVERTER_CARDS, ADVANCED_CARDS } from '../lib/constants';
+import FAQAccordion from '../components/ui/FAQAccordion.tsx';
 ---
 
 <BaseLayout
@@ -27,26 +28,42 @@ import { CONVERTER_CARDS, ADVANCED_CARDS } from '../lib/constants';
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How to convert CGPA to percentage in India?",
+            "name": "What is the standard CGPA to percentage conversion formula in India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "To convert your CGPA to percentage, you typically multiply it by a conversion factor specified by your university. Common multipliers are 9.5 (used by CBSE and many state boards) or 10 (used by CBCS and universities like SPPU). For example, a 8.5 CGPA × 9.5 = 80.75%."
+              "text": "The CGPA to percentage conversion formula in India depends on your specific university or board. For instance, the standard CBSE CGPA to percentage formula involves multiplying your CGPA by 9.5. However, universities like SPPU or Mumbai University may use a multiplier of 10 or a custom formula. You can use our CGPA to percentage calculator to quickly find your exact percentage without any manual math."
             }
           },
           {
             "@type": "Question",
-            "name": "How is total SGPA converted to CGPA?",
+            "name": "How can I calculate my overall CGPA from all my semesters?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Total SGPA to CGPA calculation involves finding the average of your SGPAs across all completed semesters. You simply add up the SGPA for each semester and divide by the total number of semesters. If credit weights apply, calculate each semester's SGPA properly, then combine them using the total credit averages."
+              "text": "You can easily find your final grade using our all semester SGPA to CGPA calculator. Just enter the SGPA and total credits for each completed semester. This total SGPA to CGPA calculator uses the weighted average method to give you an accurate result. It perfectly supports various university guidelines, including those looking for a convert SGPA to CGPA calculator VTU format."
             }
           },
           {
             "@type": "Question",
-            "name": "Why use a 75 attendance calculator?",
+            "name": "How do I know how many classes I need to attend to maintain 75%?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most colleges and schools require a minimum of 75% attendance to appear for final exams. An attendance calculator app helps you track exactly how many classes you can safely skip (bunk) or how many you must attend to maintain this mandatory threshold."
+              "text": "Our 75 attendance calculator is designed exactly for this! By entering your total conducted classes and attended classes into our college attendance calculator, the tool will instantly tell you how many upcoming classes you must attend to reach the safe 75% mark, or how many you can safely bunk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate my SGPA using individual subject grades?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, absolutely. If you don't know your final semester score yet, you can use our subject wise SGPA calculator. Simply input the credit points and the grade you expect (or received) for each subject, and the tool will accurately generate your SGPA for that specific semester."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the CGPA target calculator work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you have a dream company or placement criteria in mind, our CGPA target calculator is your best friend. You just need to enter your current CGPA, the number of semesters completed, and your target CGPA. The calculator will tell you the exact minimum SGPA you need to score in your remaining semesters to hit your goal."
             }
           }
         ]
@@ -202,4 +219,12 @@ import { CONVERTER_CARDS, ADVANCED_CARDS } from '../lib/constants';
       </div>
     </div>
   </article>
+
+  <!-- FAQ SECTION -->
+  <section class="bg-canvas-soft border-t border-hairline">
+    <div class="mx-auto max-w-[900px] px-4 py-16 sm:py-24 md:px-6">
+      <h2 class="display-md text-ink mb-8 text-center">Frequently Asked Questions</h2>
+      <FAQAccordion client:visible />
+    </div>
+  </section>
 </BaseLayout>
