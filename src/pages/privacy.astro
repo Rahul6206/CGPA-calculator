@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy | Student Utility Hub"
+  description="Read the Privacy Policy for Student Utility Hub. Learn how we protect your data."
+  canonical="/privacy"
+>
+  <main class="mx-auto max-w-[800px] px-4 py-16 sm:py-24 md:px-6 animate-fade-in-up">
+    <nav class="mb-8" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Privacy Policy</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-6">Privacy Policy.</h1>
+    
+    <div class="flex flex-col gap-6 body-md text-body">
+      <p><em>Last updated: October 2024</em></p>
+
+      <p>
+        At <strong>Student Utility Hub</strong>, your privacy is our priority. We are committed to protecting your personal information and ensuring that your experience on our website is safe and secure.
+      </p>
+
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-2">1. Data Collection & Local Storage</h2>
+        <p>
+          Student Utility Hub operates as a client-side application. This means that <strong>we do not collect, transmit, or store any of your academic data (such as grades, credits, or SGPAs) on our servers</strong>. 
+        </p>
+        <p class="mt-2">
+          Any data you input into our calculators (including your custom conversion multipliers) is saved exclusively in your browser's local storage (`localStorage`). This data never leaves your device and is only used to persist your settings across page reloads.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-2">2. Analytics</h2>
+        <p>
+          We may use privacy-friendly, anonymized web analytics tools to monitor website traffic and understand how users interact with our platform. This helps us improve our calculators. These tools do not track individual users or collect personally identifiable information (PII).
+        </p>
+      </div>
+
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-2">3. Cookies</h2>
+        <p>
+          We do not use tracking cookies for advertising purposes. We rely solely on the necessary browser storage required to make our calculators function effectively.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-2">4. Changes to this Policy</h2>
+        <p>
+          We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-2">5. Contact Us</h2>
+        <p>
+          If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@studentutilityhub.com" class="text-link hover:text-link-deep transition-colors">support@studentutilityhub.com</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

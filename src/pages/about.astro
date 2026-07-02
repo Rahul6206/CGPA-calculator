@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Us | Student Utility Hub"
+  description="Learn about the Student Utility Hub, our mission, and why we built free academic calculators for students."
+  canonical="/about"
+>
+  <main class="mx-auto max-w-[800px] px-4 py-16 sm:py-24 md:px-6 animate-fade-in-up">
+    <nav class="mb-8" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">About Us</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-6">About Student Utility Hub.</h1>
+    
+    <div class="flex flex-col gap-6 body-md text-body">
+      <p>
+        The <strong>Student Utility Hub</strong> was born out of a simple frustration: university grading systems are unnecessarily complicated. Whether it's converting a 10-point CGPA scale to a percentage, calculating an intricate subject-wise SGPA, or figuring out exactly how many classes you can afford to miss, students shouldn't have to rely on manual math or confusing spreadsheets.
+      </p>
+      
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-3">Our Mission</h2>
+        <p>
+          Our mission is to provide students across India—and the world—with the fastest, most accurate, and completely free academic calculators available online. We believe that tools helping you track your academic progress should be accessible, private, and easy to use on any device.
+        </p>
+      </div>
+      
+      <div>
+        <h2 class="body-lg font-semibold text-ink mb-3">Why Choose Us?</h2>
+        <ul class="list-disc pl-6 flex flex-col gap-2">
+          <li><strong>100% Free & No Sign-Ups:</strong> We don't believe in paywalls or forcing you to create an account just to calculate your grades.</li>
+          <li><strong>Privacy First:</strong> All calculations happen locally in your browser. We don't save, store, or sell your academic data to any servers.</li>
+          <li><strong>Customizable:</strong> We know that SPPU, VTU, Mumbai University, and CBSE all have different rules. Our tools allow you to customize multipliers to fit your exact institution.</li>
+        </ul>
+      </div>
+
+      <p class="mt-4">
+        Built by students, for students. We're constantly adding new features and refining our tools based on your feedback.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

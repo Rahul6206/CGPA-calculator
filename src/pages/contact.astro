@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us | Student Utility Hub"
+  description="Get in touch with the Student Utility Hub team for feedback, feature requests, or support."
+  canonical="/contact"
+>
+  <main class="mx-auto max-w-[800px] px-4 py-16 sm:py-24 md:px-6 animate-fade-in-up">
+    <nav class="mb-8" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 body-sm text-mute">
+        <li><a href="/" class="hover:text-ink transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-ink font-medium">Contact Us</li>
+      </ol>
+    </nav>
+
+    <h1 class="display-lg text-ink mb-6">Contact Us.</h1>
+    
+    <div class="flex flex-col gap-6 body-md text-body">
+      <p>
+        We'd love to hear from you! Whether you have a question about how one of our calculators works, want to request a new feature, or have spotted a bug, please don't hesitate to reach out.
+      </p>
+
+      <div class="rounded-[8px] bg-canvas p-6 shadow-level-1 border border-hairline my-4">
+        <h2 class="body-lg font-semibold text-ink mb-2">Email Support</h2>
+        <p class="mb-4">For all general inquiries and support, please email us at:</p>
+        <a href="mailto:support@studentutilityhub.com" class="inline-flex h-10 items-center justify-center rounded-[8px] bg-ink px-4 body-sm-strong text-on-primary no-underline transition-opacity hover:opacity-90">
+          support@studentutilityhub.com
+        </a>
+      </div>
+
+      <p>
+        We are a small team of developers and students, but we aim to respond to all inquiries within 48 hours. Your feedback helps us make the Student Utility Hub better for everyone!
+      </p>
+    </div>
+  </main>
+</BaseLayout>
